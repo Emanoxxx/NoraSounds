@@ -1,0 +1,42 @@
+:root {
+    --modal-height: 80vh;
+    --modal-width: 70vh;
+}
+.modal{
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #00000091;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    transition: all 0.5s;
+    z-index: 5;
+}
+.non-visible{
+    display: none;
+}
+.sombra{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -2;
+    cursor: pointer;
+}
+.modal .personaje{
+    max-height: 80vh;
+    width: var(--modal-width);
+    height: var(--modal-height);
+    justify-content: space-evenly;
+    cursor: default;
+    transition: all 0.2s;
+}
+.modal .card-title{
+    position: absolute;
+    top: 15px;
+}

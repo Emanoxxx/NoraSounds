@@ -1,0 +1,118 @@
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+:root {
+    --card-height: 85vh;
+    --card-width: calc(var(--card-height) / .9);
+}
+
+.card-title{
+    position: absolute;
+    top: 2px;
+    left: 0;
+    right: 0;
+    filter: blur(1px);
+}
+.card-title h2{
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size:xx-large;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: transparent;
+    background: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+}
+.portfolio{
+    display: flex;
+
+}
+.sound{
+    flex-direction: column;
+    margin: 15px;
+    display:flex;
+    min-width: 300px;
+    width: 20%;
+    border-radius: 6px;
+    /*overflow: hidden;*/
+    position:relative;
+    -webkit-box-shadow: 0px 0px 30px 4px rgba(0,0,0,0.88); 
+    box-shadow: 0px 0px 30px 4px rgba(0,0,0,0.88);
+    background: #ffffff;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 3px;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition:.5s;
+    
+}
+.sound:hover{
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0); 
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    transition:.2s
+}
+
+.sound:hover:before {
+    transition:.3s;
+    content: "";
+    width: 102%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2
+    );
+    position: absolute;
+    z-index: -1;
+    transform-origin: center;
+    animation: spin 2.5s linear infinite;
+  }
+  
+.sound:hover:after {
+    transition:.3s;
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+        var(--rotate),
+        #5ddcff,
+        #3c67e3 43%,
+        #4e00c2
+);
+opacity: 1;
+transition: opacity 0.5s;
+animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+0% {
+    --rotate: 0deg;
+}
+100% {
+    --rotate: 360deg;
+}
+}
+  
+

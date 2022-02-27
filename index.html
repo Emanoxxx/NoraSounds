@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/card.css">
+    <link rel="stylesheet" href="src/css/portfolio.css">
+    <link rel="stylesheet" href="src/css/nav.css">
+    <link rel="stylesheet" href="src/css/sidebar.css">
+    <link rel="stylesheet" href="src/css/root.css">
+    <link rel="stylesheet" href="src/css/modal.css">
+    <link rel="stylesheet" href="src/css/frame-Actions.css">
+    <link rel="stylesheet" href="src/css/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Nora Sounds</title>
+</head>
+<body>
+    <header>
+        <h1>Nora Sounds</h1>
+        <figure class="logo">
+            <img src="src/Img/logo.PNG" alt="Logo">
+        </figure>
+        
+    </header>
+    
+    <section class="portfolio" id="Portafolio">
+        <article class="sound">
+            <div class="formulario" id="sonido-card">
+            <hgroup class="card-title">
+                <h2 id="sonido-h2-title">Bonk</h2>
+            </hgroup>
+                <label for="fname">Agregar Audio</label>
+                <input type="file">
+                <label for="fname">Archivos existentes:</label>
+                <div class="audios" id="url-Div">
+                </div>
+                <label for="fname">Etiquetas</label>
+                <input type="text"  name="etiquetas" id="etiquetas" class="add-Etiqueta" placeholder="Etiquetas...">
+                <div class="etiquetas" id="etiquetas-Div">
+                </div>
+            </div>
+        </article>
+    </section>
+    <div class="actions-Frame">
+        <div class="barra-frame"></div>
+        <a class="boton-frame minimizar" onclick="minimizeFrame()" alt="minimizar"></a>
+        <a class="boton-frame salir" onclick="closeFrame()"  alt="salir"></a>
+        
+    </div>
+    <form class="search" id="search-form">
+        <div class="search-container">
+            <input id="busqueda" type="text" name="search" placeholder="Search..." class="search-input">
+            <a class="search-button" onclick="buscar('busqueda')">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </a>
+            
+        </div>
+    </form>
+    <aside class="sidebar">
+        <div class="background-sidebar"></div>
+        <div class="opciones">
+            <ul class="sidebar-opciones" id="opciones-sidebar">
+            </ul>
+        </div>
+        <div class="Settings">
+            <a class="sidebar-link"  onclick="mostrar()">Agregar</a>
+        </div>
+    </aside>
+    <div class="modal non-visible" id="modal">
+        <article class="sound">
+            
+        </article>
+        <div class="sombra" onclick="ocultar()">
+                
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script  src="src/js/main.js"></script>
+    <script  src="src/js/Consultas.js"></script>
+</body>
+</html>

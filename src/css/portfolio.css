@@ -1,0 +1,18 @@
+.portfolio{
+    position: fixed;
+    top: 0px;
+    display: flex;
+    left: 250px;
+    right: 0;
+    bottom: 0;
+    align-content: center;
+    overflow: visible;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    transition: all .5s;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: var(--color-Portfolio);
+    -webkit-box-shadow: inset 4px 4px 15px 0px #000000, -50px 5px 15px 21px rgba(0,0,0,0); 
+    box-shadow: inset 4px 4px 15px 0px #000000, -50px 5px 15px 21px rgba(0,0,0,0);
+}

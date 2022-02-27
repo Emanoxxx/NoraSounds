@@ -1,0 +1,22 @@
+:root {
+    --color-blueD: #043c74;
+    --color-blueL: #86b8e6;
+    --color-blueGray: #2c3b59;
+    --color-cyan: #4686e6;
+    --color-cyanD: #6197a8;
+    --color-cyanL: #79b7e4;
+    --color-purple: #69598d;
+    --color-purpleD: #34234b;
+    --color-purpleL: #bab6df;
+    --color-purpleWhite: #cac8e0;
+    --color-White: #ffffff;
+    --color-main: #155dc0;
+    --color-background: var(--color-White);
+    --color-navbar: #1f3d74d0;
+    --altura-navbar: 60px;
+    --color-Portfolio:var(--color-White);
+    --color-sidebar: #1d2638bf;
+  }
+  html *{
+    font-family: 'Open Sans', sans-serif;
+  }
