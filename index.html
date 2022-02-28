@@ -21,7 +21,7 @@
     <header>
         <h1>Nora Sounds</h1>
         <figure class="logo">
-            <img src="src/Img/logo.PNG" alt="Logo">
+            <img src="src/img/logo.png" alt="Logo">
         </figure>
         
     </header>
@@ -32,8 +32,11 @@
             <hgroup class="card-title">
                 <h2 id="sonido-h2-title">Bonk</h2>
             </hgroup>
-                <label for="fname">Agregar Audio</label>
-                <input type="file">
+                <form class="files-upload" id="files-upload">
+                    <label for="fname">Agregar Audio</label>
+                    <input type="file">
+                    <button class="file-up-btn">Agregar</button>
+                </form>
                 <label for="fname">Archivos existentes:</label>
                 <div class="audios" id="url-Div">
                 </div>

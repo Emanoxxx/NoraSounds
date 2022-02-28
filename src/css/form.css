@@ -133,4 +133,23 @@ text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
     border-color: #fe8686;
     transition:.2s;
 }
-    
+.files-upload{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 85%;
+}
+.files-upload input:hover,button:hover{
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+    border-color: #86b7fe;
+    transition: .2s;
+}
+.files-upload input,button{
+    text-align:center;
+    transition: .2s;
+    margin:3px;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    cursor: pointer;
+}

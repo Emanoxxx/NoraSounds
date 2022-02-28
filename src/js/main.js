@@ -1,12 +1,18 @@
 buscar('busqueda');
 var $ = jQuery = require('jquery');
-// Recuperar ventana enfocada
+// Recuperar ventana enfocada 
 $("#search-form").on("submit",function(event){
     event.preventDefault();
     buscar('busqueda');
  });
+$("#files-upload").on("submit",function(event){
+    event.preventDefault();
+    sendAudio();
+ });
 const { ipcRenderer } = require("electron");
-
+function sendAudio() {
+    
+}
 function closeFrame() {
     ipcRenderer.send("CerrarAplicacion");
 }
