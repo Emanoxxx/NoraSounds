@@ -226,7 +226,7 @@ animation: spin 2.5s linear infinite;
     }
 }
 .inicio{
-    filter:blur(5px);
+    opacity: 20%;
     transition:all 0.5s;
     pointer-events: none;
 }
