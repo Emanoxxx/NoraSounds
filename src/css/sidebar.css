@@ -88,31 +88,6 @@ padding-bottom: 60px;
     transition: .1s
   }
 
-  .sidebar-opciones::-webkit-scrollbar {
-    -webkit-appearance: none;
-}
-
-.sidebar-opciones::-webkit-scrollbar:vertical {
-    width:10px;
-}
-
-.sidebar-opciones::-webkit-scrollbar-button:increment,.sidebar-opciones::-webkit-scrollbar-button {
-    display: none;
-} 
-
-.sidebar-opciones::-webkit-scrollbar:horizontal {
-    height: 10px;
-}
-
-.sidebar-opciones::-webkit-scrollbar-thumb {
-    background-color: var(--color-blueD);
-    border-radius: 20px;
-    border: 2px solid #00000038;
-}
-
-.sidebar-opciones::-webkit-scrollbar-track {
-    border-radius: 10px;  
-}
 /*search*/
 .search{
   position: fixed;

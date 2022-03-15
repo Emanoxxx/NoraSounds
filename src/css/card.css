@@ -7,14 +7,15 @@
 :root {
     --card-height: 85vh;
     --card-width: calc(var(--card-height) / .9);
+    --new-Sound-height: 30%;
+    --new-Sound-width: calc(var(--alert-height) / 1.5);
 }
 
 .card-title{
     position: absolute;
-    top: 2px;
+    top: 1px;
     left: 0;
     right: 0;
-    filter: blur(1px);
 }
 .card-title h2{
     margin: 0;
@@ -54,7 +55,7 @@
     justify-content: center;
     align-items: center;
     color: rgb(0, 0, 0);
-    cursor: pointer;
+    cursor: default;
     transition:.5s;
     
 }
@@ -115,4 +116,200 @@ animation: spin 2.5s linear infinite;
 }
 }
   
+.new-Sound{
+    width:var(--new-Sound-width);
+    height:var(--new-Sound-height);
+    cursor: default;
+}
+.new-Sound:hover:before {
+    transition:.3s;
+    content: "";
+    width: 103%;
+    height: 103%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate),
+        #5ddcff,
+        #3c67e3 43%,
+        #4e00c2
+    );
+    position: absolute;
+    z-index: -1;
+    transform-origin: center;
+    animation: spin 2.5s linear infinite;
+  }
+  
+.new-Sound:hover:after {
+    transition:.3s;
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+        var(--rotate),
+        #5ddcff,
+        #3c67e3 43%,
+        #4e00c2
 
+);
+opacity: 1;
+transition: opacity 0.5s;
+animation: spin 2.5s linear infinite;
+}
+.new-Sound:before {
+    transition:.3s;
+    content: "";
+    width: 103%;
+    height: 103%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate),
+        #5ddcff,
+        #3c67e3 43%,
+        #4e00c2
+    );
+    position: absolute;
+    z-index: -1;
+    transform-origin: center;
+    animation: spin 2.5s linear infinite;
+  }
+  
+.new-Sound:after {
+    transition:.3s;
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+        var(--rotate),
+        #5ddcff,
+        #3c67e3 43%,
+        #4e00c2
+);
+opacity: 1;
+transition: opacity 0.5s;
+animation: spin 2.5s linear infinite;
+}
+.content-add-Sound{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.add-Sound-buttons{
+    position: initial;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-height: 570px) {
+    .alert-title h2 {
+        font-size: 1.1em;
+        transition:all 0.3s;
+    }
+}
+.inicio{
+    filter:blur(5px);
+    transition:all 0.5s;
+    pointer-events: none;
+}
+.cambio-Sound{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+  .Borrar-Sound-Button{
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      z-index: 2;
+      transition: all 0.5s;
+      cursor: pointer;
+  }
+  .Borrar-Sound-Button *{
+    fill: red;
+  }
+  .Borrar-Sound-Button:hover *{
+    fill: rgba(255, 0, 0, 0.349);
+  }
+  .Borrar-Sound-Button:hover svg{
+    width:101%;
+    height:101%;
+  }
+  .on-Borrar:hover:before {
+    transition:.3s;
+    content: "";
+    width: 102%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate),
+      #e68484,
+      #ff665c 43%,
+      #c20000
+    );
+    position: absolute;
+    z-index: -1;
+    transform-origin: center;
+    animation: spin 2.5s linear infinite;
+  }
+  
+.on-Borrar:hover:after {
+    transition:.3s;
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+        var(--rotate),
+        #e68484,
+      #ff665c 43%,
+      #c20000
+);
+opacity: 1;
+transition: opacity 0.5s;
+animation: spin 2.5s linear infinite;
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="src/css/card.css">
     <link rel="stylesheet" href="src/css/portfolio.css">
     <link rel="stylesheet" href="src/css/nav.css">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="src/css/modal.css">
     <link rel="stylesheet" href="src/css/frame-Actions.css">
     <link rel="stylesheet" href="src/css/form.css">
+    <link rel="stylesheet" href="src/css/alerta.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -27,21 +29,51 @@
     </header>
     
     <section class="portfolio" id="Portafolio">
-        <article class="sound">
+        <article class="sound inicio" id="sonido-folio">
+            <svg id="Borrar-Sound-Button" class="Borrar-Sound-Button" version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="25.000000pt" height="25.000000pt" viewBox="0 0 512.000000 512.000000"
+            preserveAspectRatio="xMidYMid meet">
+            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+            fill="#000000" stroke="none">
+            <path d="M2385 5064 c-584 -47 -1126 -290 -1554 -698 -97 -93 -242 -269 -333
+            -406 -457 -686 -544 -1550 -232 -2315 305 -747 963 -1303 1754 -1480 338 -76
+            643 -82 985 -20 909 167 1640 812 1923 1696 79 246 113 468 113 739 0 660
+            -242 1261 -696 1729 -392 404 -866 646 -1442 736 -96 15 -419 27 -518 19z
+            m905 -564 c16 -17 39 -57 52 -88 21 -53 23 -73 26 -299 l3 -243 327 0 c321 0
+            328 -1 367 -23 108 -61 113 -215 8 -287 -36 -25 -40 -25 -312 -31 -152 -4
+            -805 -10 -1451 -14 -1123 -6 -1177 -5 -1209 12 -19 10 -48 35 -65 56 -26 33
+            -31 47 -31 97 0 50 5 64 31 97 57 72 56 71 471 79 l372 7 3 226 c4 258 13 299
+            89 385 l40 46 192 3 c106 1 387 3 625 5 l434 2 28 -30z m626 -1139 c51 -23 91
+            -74 99 -127 5 -30 -18 -153 -104 -534 -283 -1267 -362 -1617 -371 -1646 -12
+            -37 -64 -89 -103 -103 -19 -8 -301 -11 -871 -11 l-843 0 -44 23 c-62 33 -82
+            76 -128 278 -22 96 -128 559 -236 1029 -108 470 -200 875 -205 899 -15 81 23
+            160 94 192 39 18 95 19 1356 19 1263 0 1317 -1 1356 -19z"/>
+            <path d="M2568 4183 l-338 -3 0 -160 0 -160 168 0 c93 0 271 3 395 7 l227 6 0
+            159 0 158 -57 -2 c-32 -2 -210 -4 -395 -5z"/>
+            <path d="M1495 3018 c4 -20 317 -1388 376 -1646 l21 -92 676 2 676 3 77 345
+            c42 190 129 579 193 865 64 286 116 526 116 533 0 9 -221 12 -1070 12 l-1070
+            0 5 -22z m813 -62 c37 -19 68 -55 87 -98 13 -32 15 -121 15 -660 0 -390 -4
+            -637 -10 -660 -6 -21 -27 -51 -50 -71 -67 -61 -153 -62 -220 -1 -21 20 -43 50
+            -49 67 -14 49 -24 1231 -10 1296 12 58 48 107 94 127 40 17 109 17 143 0z
+            m632 -16 c46 -23 74 -60 89 -117 12 -44 13 -833 2 -1140 -5 -132 -9 -155 -27
+            -179 -35 -47 -70 -67 -127 -72 -70 -6 -120 17 -155 71 l-27 41 -3 623 c-2 406
+            1 637 8 662 29 107 143 160 240 111z"/>
+            </g>
+            </svg>
             <div class="formulario" id="sonido-card">
             <hgroup class="card-title">
-                <h2 id="sonido-h2-title">Bonk</h2>
+                <h2 id="sonido-h2-title"></h2>
             </hgroup>
                 <form class="files-upload" id="files-upload">
                     <label for="fname">Agregar Audio</label>
-                    <input type="file">
-                    <button class="file-up-btn">Agregar</button>
+                    <input type="file" id="sound-data" accept=".mp3" multiple>
+                    <button class="file-up-btn" id="file-button">Agregar</button>
                 </form>
                 <label for="fname">Archivos existentes:</label>
                 <div class="audios" id="url-Div">
                 </div>
                 <label for="fname">Etiquetas</label>
-                <input type="text"  name="etiquetas" id="etiquetas" class="add-Etiqueta" placeholder="Etiquetas...">
+                <form id="etiquetas-form" class="form-etiqueta"><input type="text"  name="etiquetas" id="etiquetas" class="add-Etiqueta" title="Maximo de 30 letras" pattern=".{3,30}" placeholder="Etiquetas..."></form>
                 <div class="etiquetas" id="etiquetas-Div">
                 </div>
             </div>
@@ -69,13 +101,10 @@
             </ul>
         </div>
         <div class="Settings">
-            <a class="sidebar-link"  onclick="mostrar()">Agregar</a>
+            <a class="sidebar-link"  onclick="DesplegarAgregarSonido()">Agregar</a>
         </div>
     </aside>
     <div class="modal non-visible" id="modal">
-        <article class="sound">
-            
-        </article>
         <div class="sombra" onclick="ocultar()">
                 
         </div>

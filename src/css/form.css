@@ -133,6 +133,21 @@ text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
     border-color: #fe8686;
     transition:.2s;
 }
+.incorrecto:focus{
+    box-shadow: 0 0 0 0.25rem rgba(253, 13, 13, 0.25);
+    border-color: #ff5757;
+    transition:.2s;
+}
+.incorrecto-sound{
+    box-shadow: 0 0 0 0.25rem rgba(253, 13, 13, 0.25);
+    border-color: #ff5757;
+    transition:.2s;
+}
+.incorrecto-sound:focus{
+    box-shadow: 0 0 0 0.25rem rgba(253, 13, 13, 0.25);
+    border-color: #ff5757;
+    transition:.2s;
+}
 .files-upload{
     display: flex;
     flex-direction: column;
@@ -152,4 +167,10 @@ text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
     border: 1px solid #ced4da;
     background-color: #fff;
     cursor: pointer;
+}
+.form-etiqueta{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
